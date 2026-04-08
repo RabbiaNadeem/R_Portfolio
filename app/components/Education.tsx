@@ -1,0 +1,64 @@
+import { portfolioData } from '../data/portfolio';
+
+export const Education = () => {
+  const { education, certifications } = portfolioData;
+
+  return (
+    <section id="education" className="py-16 md:py-24">
+      <h2 className="text-3xl md:text-4xl font-bold mb-12 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        Education & Achievements
+      </h2>
+
+      {/* Education */}
+      <div className="backdrop-blur-md bg-white/5 border border-cyan-400/20 rounded-lg p-8 mb-8">
+        <h3 className="text-2xl font-bold text-white mb-2">{education.degree}</h3>
+        <p className="text-cyan-300 font-semibold">{education.school}</p>
+        <p className="text-sm text-gray-400 mb-6">{education.timeline}</p>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div>
+            <h4 className="text-purple-300 font-semibold mb-3">Relevant Coursework</h4>
+            <ul className="space-y-2">
+              {education.coursework.map((course, index) => (
+                <li key={index} className="text-gray-300 flex items-center">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400 mr-2"></span>
+                  {course}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-purple-300 font-semibold mb-3">Leadership & Teaching</h4>
+            <ul className="space-y-2">
+              {education.roles.map((role, index) => (
+                <li key={index} className="text-gray-300 flex items-start">
+                  <span className="w-2 h-2 rounded-full bg-purple-400 mr-2 mt-1 min-w-fit"></span>
+                  <span>{role}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      {/* Certifications */}
+      <div>
+        <h3 className="text-2xl font-bold text-white mb-6">Certifications & Impact</h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {certifications.map((cert, index) => (
+            <div
+              key={index}
+              className="backdrop-blur-md bg-white/5 border border-purple-400/20 rounded-lg p-4 hover:border-purple-400/50 transition-all duration-300"
+            >
+              <p className="text-gray-300 flex items-start">
+                <span className="text-purple-400 mr-3 font-bold">✓</span>
+                <span>{cert}</span>
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
