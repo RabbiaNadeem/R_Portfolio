@@ -11,9 +11,9 @@ export const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-16 md:py-24 border-t border-purple-400/20">
+    <section id="contact" className="py-16 md:py-24 border-t border-white/20">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
           Let's Connect
         </h2>
         <p className="text-gray-300 mb-12 text-lg">
@@ -27,19 +27,19 @@ export const Contact = () => {
               href={link.href}
               target={link.href.startsWith('http') ? '_blank' : undefined}
               rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="backdrop-blur-md bg-white/5 border border-cyan-400/30 rounded-lg p-4 hover:bg-cyan-400/20 hover:border-cyan-400/60 transition-all duration-300 group"
+              className="backdrop-blur-md bg-white/5 border border-white/30 rounded-lg p-4 hover:bg-white/20 hover:border-white/60 transition-all duration-300 group"
             >
               <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                 {link.icon}
               </div>
-              <p className="text-cyan-300 font-semibold hover:text-white">
+              <p className="text-white font-semibold hover:text-gray-200">
                 {link.label}
               </p>
             </a>
           ))}
         </div>
 
-        <div className="mt-12 pt-8 border-t border-purple-400/20">
+        <div className="mt-12 pt-8 border-t border-white/20">
           <p className="text-gray-400 text-sm">
             © {new Date().getFullYear()} Rabbia Nadeem. All rights reserved.
           </p>

@@ -32,32 +32,32 @@ export default function Home() {
                 <nav>
                   <ul className="space-y-3">
                     <li>
-                      <a href="#about" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#about" className="nav-item text-white hover:text-gray-300">
                         About
                       </a>
                     </li>
                     <li>
-                      <a href="#tech-stack" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#tech-stack" className="nav-item text-white hover:text-gray-300">
                         Tech Stack
                       </a>
                     </li>
                     <li>
-                      <a href="#experience" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#experience" className="nav-item text-white hover:text-gray-300">
                         Experience
                       </a>
                     </li>
                     <li>
-                      <a href="#projects" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#projects" className="nav-item text-white hover:text-gray-300">
                         Projects
                       </a>
                     </li>
                     <li>
-                      <a href="#education" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#education" className="nav-item text-white hover:text-gray-300">
                         Education
                       </a>
                     </li>
                     <li>
-                      <a href="#contact" className="nav-item text-cyan-300 hover:text-white">
+                      <a href="#contact" className="nav-item text-white hover:text-gray-300">
                         Contact
                       </a>
                     </li>
@@ -69,23 +69,23 @@ export default function Home() {
               <div className="flex gap-6 pt-8 lg:pt-0">
                 <a
                   href={portfolioData.contact.github}
-                  target="_blank"
+                  target="https://github.com/RabbiaNadeem"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+                  className="text-gray-400 hover:text-white transition-colors text-sm font-semibold"
                 >
                   GitHub
                 </a>
                 <a
                   href={portfolioData.contact.linkedin}
-                  target="_blank"
+                  target="www.linkedin.com/in/rabbianadeem"
                   rel="noopener noreferrer"
-                  className="text-gray-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+                  className="text-gray-400 hover:text-white transition-colors text-sm font-semibold"
                 >
                   LinkedIn
                 </a>
                 <a
                   href={`mailto:${portfolioData.contact.email}`}
-                  className="text-gray-400 hover:text-cyan-300 transition-colors text-sm font-semibold"
+                  className="text-gray-400 hover:text-white transition-colors text-sm font-semibold"
                 >
                   Email
                 </a>
