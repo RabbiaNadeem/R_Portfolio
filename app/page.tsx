@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import StarField from './components/StarField';
 import { Hero } from './components/Hero';
@@ -7,9 +7,11 @@ import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
-import { portfolioData } from './data/portfolio';
+import { portfolioData } from './data/portfolio'
+import { useScrollObserver } from './useScrollObserver';
 
 export default function Home() {
+  useScrollObserver();
   return (
     <div className="relative min-h-screen">
       <StarField />
@@ -107,3 +109,4 @@ export default function Home() {
     </div>
   );
 }
+

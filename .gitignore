@@ -33,6 +33,16 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 
+# local env overrides
+.env.local
+
+# dotenv files with secrets
+.env.*.local
+
+# Editor folders and OS files
+.vscode/
+Thumbs.db
+
 # vercel
 .vercel
 

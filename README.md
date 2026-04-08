@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-This is a personal portfolio showcasing my projects and skills, built using [Next.js](https://nextjs.org/) and modern web technologies.
+Hi! I am a full stack developer who loves building applications with AI at the core.
 
 ## Features
 
@@ -18,11 +18,4 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Tech Stack
-
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS (or standard CSS)
 

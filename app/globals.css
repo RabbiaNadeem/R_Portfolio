@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 :root {
   --bg: #0a0e27;
@@ -116,4 +116,13 @@ html {
 
 section {
   animation: fadeInUp 0.8s ease-out;
+}
+
+.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-item.active {
+  letter-spacing: 0.3em;
+  transform: scale(1.1);
 }

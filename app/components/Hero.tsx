@@ -1,20 +1,17 @@
 import { portfolioData } from '../data/portfolio';
 
 export const Hero = () => {
-  const { tagline, bio } = portfolioData.hero;
+  const { bio } = portfolioData.hero;
+  const paragraphs = bio.split('\n\n');
 
   return (
-    <section id="about" className="py-12 md:py-20">
+    <section id="about" className="py-16 md:py-24">
       <div className="space-y-6">
-        <h2 className="text-4xl md:text-5xl font-bold text-white">
-          Full Stack Developer
-        </h2>
-        <p className="text-xl text-white font-semibold leading-relaxed">
-          {tagline}
-        </p>
-        <p className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
-          {bio}
-        </p>
+        {paragraphs.map((paragraph, index) => (
+          <p key={index} className="text-base md:text-lg text-gray-300 leading-relaxed max-w-2xl">
+            {paragraph}
+          </p>
+        ))}
       </div>
     </section>
   );
