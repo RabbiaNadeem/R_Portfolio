@@ -14,7 +14,7 @@ export const Contact = () => {
     <section id="contact" className="py-16 md:py-24 border-t border-white/20">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
-          Let's Connect
+          Let&apos;s Connect
         </h2>
         <p className="text-gray-300 mb-12 text-lg">
           Feel free to reach out for collaborations or discussions about AI, web development, and innovative tech solutions.
@@ -27,7 +27,7 @@ export const Contact = () => {
               href={link.href}
               target={link.href.startsWith('http') ? '_blank' : undefined}
               rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="backdrop-blur-md bg-white/5 border border-white/30 rounded-lg p-4 hover:bg-white/20 hover:border-white/60 transition-all duration-300 group"
+              className="backdrop-blur-md bg-white/5 border border-white/30 rounded-lg p-3 sm:p-4 hover:bg-white/20 hover:border-white/60 transition-all duration-300 group"
             >
               <div className="text-2xl mb-2 group-hover:scale-110 transition-transform">
                 {link.icon}

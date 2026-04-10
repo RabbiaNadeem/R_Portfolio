@@ -12,10 +12,10 @@ export const Experience = () => {
         {experience.map((job, index) => (
           <div
             key={index}
-            className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-8 hover:border-white/50 transition-all duration-300"
+            className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-5 sm:p-6 md:p-8 hover:border-white/50 transition-all duration-300"
           >
             <div className="mb-4">
-              <h3 className="text-2xl font-bold text-white">{job.title}</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-white">{job.title}</h3>
               <p className="text-white font-semibold">{job.company}</p>
               <p className="text-sm text-gray-400">{job.timeline}</p>
             </div>

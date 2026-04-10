@@ -49,7 +49,7 @@
         "Maintained conversation history for seamless user experience",
       ],
       github: "https://github.com/RabbiaNadeem/askmypdf",
-      tags: ["Groq API", "Qdrant", "Supabase", "FastEmbeddings", "RAG Pipeline"],
+      tags: ["Next.js", "FastAPI", "Groq API", "Qdrant", "Supabase", "FastEmbeddings","LangChain", "RAG Pipeline", "Railway", "Vercel"],
     },
     {
       title: "HisaabKitab",
@@ -62,7 +62,7 @@
       ],
       github: "https://github.com/RabbiaNadeem/HisaabKitab",
       liveDemo: "https://hisaab-kitab-two.vercel.app",
-      tags: ["Next.js", "FastAPI", "AI", "Supabase", "Analytics"],
+      tags: ["Next.js", "FastAPI", "AI", "Supabase", "Analytics", "Vercel"],
     },
   ],
 

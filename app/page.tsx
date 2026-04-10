@@ -19,16 +19,16 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="lg:flex lg:gap-16">
             {/* Left Column - Header (Sticky) */}
-            <div className="lg:w-1/3 lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-between lg:py-20">
+            <div className="py-12 sm:py-16 lg:py-20 lg:w-1/3 lg:sticky lg:top-0 lg:h-screen lg:flex lg:flex-col lg:justify-between">
               <div>
-                <div className="name-container mb-12">
+                <div className="name-container mb-8 sm:mb-12">
                   {'RABBIA NADEEM'.split('').map((char, index) => (
                     <div key={index} className="hover">
                       <h1>{char === ' ' ? '\u00A0' : char}</h1>
                     </div>
                   ))}
                 </div>
-                <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-xs">
+                <p className="text-gray-400 text-sm mb-8 leading-relaxed max-w-none sm:max-w-xs">
                   Full Stack Developer crafting intelligent web solutions with AI
                 </p>
                 <nav>
@@ -68,7 +68,7 @@ export default function Home() {
               </div>
 
               {/* Social Links */}
-              <div className="flex gap-6 pt-8 lg:pt-0">
+              <div className="flex flex-wrap gap-4 sm:gap-6 pt-8 lg:pt-0">
                 <a
                   href={portfolioData.contact.github}
                   target="https://github.com/RabbiaNadeem"
@@ -95,7 +95,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Content */}
-            <div className="lg:w-2/3 py-20 space-y-24">
+            <div className="lg:w-2/3 py-12 sm:py-16 lg:py-20 space-y-16 sm:space-y-20 lg:space-y-24">
               <Hero />
               <TechStack />
               <Experience />

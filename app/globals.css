@@ -14,6 +14,13 @@ body {
   color: var(--text);
   font-family: var(--font-inter);
   min-height: 100vh;
+  overflow-x: hidden;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 /* Smooth scrolling */
@@ -22,9 +29,10 @@ html {
 }
 
 .name-container {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   gap: 0.25rem;
-  margin-bottom: 2rem;
+  max-width: 100%;
 }
 
 .name-container .hover {
@@ -49,6 +57,21 @@ html {
   color: #fff;
   -webkit-text-stroke: 2px transparent;
   text-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 640px) {
+  .name-container {
+    gap: 0.15rem;
+  }
+
+  .name-container h1 {
+    font-size: 1.75rem;
+    -webkit-text-stroke: 1px #fff;
+  }
+
+  .name-container .hover:hover h1 {
+    transform: scale(1.15);
+  }
 }
 
 .nav-item {

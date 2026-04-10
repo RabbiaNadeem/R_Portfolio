@@ -19,7 +19,7 @@ export const TechStack = () => {
         {categories.map((category) => (
           <div
             key={category.label}
-            className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-6 hover:border-white/50 transition-all duration-300"
+            className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-5 sm:p-6 hover:border-white/50 transition-all duration-300"
           >
             <h3 className="text-lg font-semibold text-white mb-4">
               {category.label}

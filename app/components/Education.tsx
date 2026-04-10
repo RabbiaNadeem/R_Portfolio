@@ -10,8 +10,8 @@ export const Education = () => {
       </h2>
 
       {/* Education */}
-      <div className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-8 mb-8">
-        <h3 className="text-2xl font-bold text-white mb-2">{education.degree}</h3>
+      <div className="backdrop-blur-md bg-white/5 border border-white/20 rounded-lg p-5 sm:p-6 md:p-8 mb-8">
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-2">{education.degree}</h3>
         <p className="text-white font-semibold">{education.school}</p>
         <p className="text-sm text-gray-400 mb-6">{education.timeline}</p>
 
@@ -44,7 +44,7 @@ export const Education = () => {
 
       {/* Certifications */}
       <div>
-        <h3 className="text-2xl font-bold text-white mb-6">Certifications & Impact</h3>
+        <h3 className="text-xl sm:text-2xl font-bold text-white mb-6">Certifications & Impact</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {certifications.map((cert, index) => (
             <div
