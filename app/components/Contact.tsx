@@ -7,7 +7,6 @@ export const Contact = () => {
     { label: 'GitHub', href: contact.github, icon: '🔗' },
     { label: 'LinkedIn', href: contact.linkedin, icon: '🔗' },
     { label: 'Email', href: `mailto:${contact.email}`, icon: '✉️' },
-    { label: 'Phone', href: `tel:${contact.phone}`, icon: '📞' },
   ];
 
   return (

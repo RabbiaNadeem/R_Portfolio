@@ -91,7 +91,6 @@
     github: "https://github.com/RabbiaNadeem",
     linkedin: "https://linkedin.com/in/rabbianadeem",
     email: "rabbianadeem1408@gmail.com",
-    phone: "+92 319 4033855",
   },
 };
 
