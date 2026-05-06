@@ -122,6 +122,20 @@
       github: "https://github.com/RabbiaNadeem/HisaabKitab",
       tags: ["Next.js", "FastAPI", "AI", "Supabase", "Analytics", "Vercel"],
     },
+    {
+      title: "Smart Document Analyzer",
+      subtitle: "Structured insights from documents",
+      image: "/projects/smart-document-analyzer.svg",
+      description:
+        "Upload a document and get back clear bullet-point summaries of the key information—entities, dates, action items, and main themes—so you can scan what matters without reading the full file.",
+      bullets: [
+        "Parses uploaded documents and analyzes their content to extract the most important information automatically.",
+        "Returns findings as concise bullet points so summaries are easy to skim and share.",
+        "Highlights structured facts (such as names, deadlines, figures, and topics) to support quick decision-making.",
+      ],
+      github: "https://github.com/RabbiaNadeem/Smart_Document_Analyzer",
+      tags: ["Document AI", "LLM", "Text extraction", "Summarization", "Next.js", "FastAPI"],
+    },
   ],
 
   // Education
@@ -129,7 +143,7 @@
     degree: "Bachelor of Computer Science (CGPA: 3.59)",
     school: "University of Management & Technology (UMT), Lahore",
     timeline: "2021 - 2025",
-    coursework: ["Data Structures", "Database Systems", "Web Development", "Artificial Intelligence"],
+    coursework: ["Data Structures", "Database Systems", "Web Development", "Artificial Intelligence and Machine Learning"],
   },
 
   // Achievements (under Education on site)
