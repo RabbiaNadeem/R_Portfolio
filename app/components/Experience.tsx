@@ -21,9 +21,11 @@ export const Experience = () => {
             </div>
             <ul className="space-y-3">
               {job.bullets.map((bullet, bulletIndex) => (
-                <li key={bulletIndex} className="flex gap-3 text-gray-300">
-                  <span className="text-white font-bold min-w-fit">▸</span>
-                  <span>{bullet}</span>
+                <li key={bulletIndex} className="flex items-start gap-3 text-gray-300">
+                  <span className="mt-0.5 shrink-0 text-white font-bold" aria-hidden="true">
+                    ▸
+                  </span>
+                  <span className="min-w-0">{bullet}</span>
                 </li>
               ))}
             </ul>

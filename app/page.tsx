@@ -95,7 +95,7 @@ export default function Home() {
             </div>
 
             {/* Right Column - Content */}
-            <div className="lg:w-2/3 py-12 sm:py-16 lg:py-20 space-y-16 sm:space-y-20 lg:space-y-24">
+            <div className="lg:w-2/3 pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 space-y-16 sm:space-y-20 lg:space-y-24">
               <Hero />
               <TechStack />
               <Experience />
