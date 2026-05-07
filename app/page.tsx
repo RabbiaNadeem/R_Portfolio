@@ -7,6 +7,7 @@ import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
 import { Education } from './components/Education';
 import { Contact } from './components/Contact';
+import { ChatWithBiyya } from './components/ChatWithBiyya';
 import { portfolioData } from './data/portfolio'
 import { useScrollObserver } from './useScrollObserver';
 
@@ -36,6 +37,11 @@ export default function Home() {
                     <li>
                       <a href="#about" className="nav-item text-white hover:text-gray-300">
                         About
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#chat-with-biyya" className="nav-item text-white hover:text-gray-300">
+                        Meet Biyya
                       </a>
                     </li>
                     <li>
@@ -97,6 +103,7 @@ export default function Home() {
             {/* Right Column - Content */}
             <div className="lg:w-2/3 pt-12 sm:pt-16 lg:pt-20 pb-6 sm:pb-8 lg:pb-10 space-y-16 sm:space-y-20 lg:space-y-24">
               <Hero />
+              <ChatWithBiyya />
               <TechStack />
               <Experience />
               <Projects />
