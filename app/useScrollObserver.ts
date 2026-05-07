@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 
 export const useScrollObserver = () => {
   useEffect(() => {
-    const sections = ['about', 'tech-stack', 'experience', 'projects', 'education', 'contact'];
+    const sections = ['about', 'chat-with-biyya', 'tech-stack', 'experience', 'projects', 'education', 'contact'];
     const navLinks = document.querySelectorAll('.nav-item');
 
     const observer = new IntersectionObserver(
