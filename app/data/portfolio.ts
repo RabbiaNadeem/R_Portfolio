@@ -111,8 +111,8 @@
     {
       title: "HisaabKitab",
       subtitle: "AI-Powered Finance Tracker",
-      image: "/HK_01.jpg",
-      gallery: ["/HK_02.jpg", "/HK_03.jpg"],
+      image: "/HK_01.png",
+      gallery: ["/HK_02.png"],
       description: "Built a full-stack financial management tool using Next.js (frontend) and FastAPI (backend) that automatically categorizes expenses using AI. Developed a responsive analytics dashboard with data visualizations to help users track spending patterns and improve financial habits.",
       bullets: [
         "Built full-stack financial management tool with Next.js (frontend) and FastAPI (backend)",

@@ -6,19 +6,31 @@ import { portfolioData } from "../data/portfolio";
 export const Projects = () => {
   const { projects } = portfolioData;
   const [activeProject, setActiveProject] = useState<(typeof projects)[number] | null>(null);
+  const [lightboxSrc, setLightboxSrc] = useState<string | null>(null);
 
   useEffect(() => {
-    if (!activeProject) return;
+    if (!activeProject) {
+      setLightboxSrc(null);
+      return;
+    }
 
     const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setActiveProject(null);
+      if (event.key !== "Escape") return;
+      if (lightboxSrc) {
+        setLightboxSrc(null);
+        return;
       }
+      setActiveProject(null);
     };
 
     window.addEventListener("keydown", handleEscape);
     return () => window.removeEventListener("keydown", handleEscape);
-  }, [activeProject]);
+  }, [activeProject, lightboxSrc]);
+
+  function closeDrawer() {
+    setLightboxSrc(null);
+    setActiveProject(null);
+  }
 
   return (
     <section id="projects" className="py-16 md:py-24">
@@ -46,7 +58,7 @@ export const Projects = () => {
           <button
             type="button"
             aria-label="Close project details"
-            onClick={() => setActiveProject(null)}
+            onClick={closeDrawer}
             className="absolute inset-0 bg-black/70"
           />
           <aside className="absolute right-0 bottom-0 top-[clamp(5.5rem,12vh,9.5rem)] w-full sm:w-[82vw] lg:w-[75vw] max-w-6xl overflow-y-auto bg-black border-l border-t border-white/20 rounded-none sm:rounded-tl-2xl sm:rounded-bl-2xl p-5 sm:p-6 md:p-8 shadow-2xl [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:w-0 [&::-webkit-scrollbar]:bg-transparent">
@@ -57,7 +69,7 @@ export const Projects = () => {
               </div>
               <button
                 type="button"
-                onClick={() => setActiveProject(null)}
+                onClick={closeDrawer}
                 aria-label="Close project details"
                 className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black text-lg font-light leading-none text-white hover:bg-black/90 border border-white/10 transition-colors"
               >
@@ -70,20 +82,28 @@ export const Projects = () => {
                 (src): src is string => Boolean(src)
               );
               return (
-                <div className="space-y-3 mb-6">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3 mb-6">
                   {imgs.map((src, i) => (
-                    <div
+                    <button
                       key={`${src}-${i}`}
-                      className="rounded-lg border border-white/20 bg-zinc-950/50 flex justify-center p-2 sm:p-3"
+                      type="button"
+                      onClick={() => setLightboxSrc(src)}
+                      className="group relative rounded-lg border border-white/20 bg-zinc-950/50 overflow-hidden p-1 sm:p-2 focus:outline-none focus:ring-2 focus:ring-white/40"
+                      aria-label={`Enlarge screenshot ${i + 1} of ${imgs.length}`}
                     >
                       <img
                         src={src}
                         alt={`${activeProject.title} preview${imgs.length > 1 ? ` ${i + 1}` : ""}`}
-                        className="h-auto w-full max-w-full max-h-[min(78vh,920px)] object-contain object-center"
+                        className="h-28 sm:h-36 md:h-44 w-full object-contain object-top bg-black/40"
                         loading={i === 0 ? "eager" : "lazy"}
                         decoding="async"
                       />
-                    </div>
+                      <span className="pointer-events-none absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 text-white text-xs font-semibold drop-shadow">
+                          View larger
+                        </span>
+                      </span>
+                    </button>
                   ))}
                 </div>
               );
@@ -140,6 +160,32 @@ export const Projects = () => {
               })()}
             </div>
           </aside>
+        </div>
+      ) : null}
+
+      {lightboxSrc && activeProject ? (
+        <div className="fixed inset-0 z-[60] flex items-center justify-center p-4 sm:p-8">
+          <button
+            type="button"
+            aria-label="Close enlarged image"
+            onClick={() => setLightboxSrc(null)}
+            className="absolute inset-0 bg-black/85"
+          />
+          <div className="relative z-10 max-h-[90vh] max-w-[min(96vw,1200px)] w-full flex flex-col items-center gap-3">
+            <button
+              type="button"
+              onClick={() => setLightboxSrc(null)}
+              aria-label="Close"
+              className="self-end flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-black border border-white/20 text-white text-xl leading-none hover:bg-white/10"
+            >
+              ×
+            </button>
+            <img
+              src={lightboxSrc}
+              alt={`${activeProject.title} enlarged preview`}
+              className="max-h-[calc(90vh-4rem)] w-full object-contain rounded-lg border border-white/20 shadow-2xl"
+            />
+          </div>
         </div>
       ) : null}
     </section>
